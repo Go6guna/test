@@ -1,4 +1,4 @@
-for j in $(seq 1 100); do
+for j in $(seq 401 500); do
 	git checkout -b issue/COMMIT-$j-branch
 		for i in $(seq 1 100); do
 			echo "$i" >> do_not_read_me_$j.txt
