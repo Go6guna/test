@@ -1,5 +1,11 @@
-for i in $(seq 1 26000); do
-	echo "$i" >> do_not_read_me_dvcs.txt
-	git add .
-	git commit -m "DVCS-$i: $i"
+for j in $(seq 1 1); do
+	git checkout -b issue/COMMIT-$j-branch
+		for i in $(seq 1 1); do
+			echo "$i" >> do_not_read_me_$j.txt
+			git add .
+			git commit -m "COMMIT-$i: $i + $j = $((i + j))"
+		done
+	git push --set-upstream origin issue/COMMIT-$j-branch
+	git checkout master --force
 done
+
