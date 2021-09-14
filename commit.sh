@@ -1,4 +1,4 @@
-for j in $(seq 1 100); do
+for j in $(seq 101 200); do
 	git checkout -b issue/COMMIT-$j-branch
 		for i in $(seq 1 100); do
 			echo "$i" >> do_not_read_me_$j.txt
@@ -8,5 +8,3 @@ for j in $(seq 1 100); do
 	git push --set-upstream origin issue/COMMIT-$j-branch
 	git checkout master --force
 done
-
-
