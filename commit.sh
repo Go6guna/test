@@ -1,3 +1,6 @@
+git fetch
+git reset origin/master --hard
+git pull
 for j in $(seq 1 100); do
 #	git checkout -b issue/COMMIT-$j-branch
 
